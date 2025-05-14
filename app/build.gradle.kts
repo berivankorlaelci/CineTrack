@@ -43,8 +43,18 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    //Firebase
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.firestore.ktx)
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
+
+    implementation(libs.volley)
+    implementation(libs.picasso)
+
+
+
+
+
+
 }
