@@ -1,6 +1,7 @@
 package com.example.cinetrack.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.cinetrack.R;
 import com.example.cinetrack.model.Movie;
+import com.example.cinetrack.ui.MovieDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -64,6 +66,17 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         } else {
             holder.imagePoster.setImageResource(R.drawable.ic_launcher_background); // varsayılan görsel
         }
+
+        //Film tıklanınca yeni ekrana aktaracağımız verilerin tanımlanması
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, MovieDetailActivity.class);
+            intent.putExtra("title", movie.getTitle());
+            intent.putExtra("year", movie.getYear());
+            intent.putExtra("poster", movie.getPoster());
+            intent.putExtra("imdbID", movie.getImdbID());
+            intent.putExtra("type", movie.getType());
+            context.startActivity(intent);
+        });
     }
 
     // Liste uzunluğu
