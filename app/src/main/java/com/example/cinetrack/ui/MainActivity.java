@@ -1,5 +1,6 @@
 package com.example.cinetrack.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String BASE_URL = "https://www.omdbapi.com/";
 
     private EditText searchEditText;
-    private Button searchButton;
+    private Button searchButton,buttonFavorites;
     private RecyclerView recyclerView;
     private MovieAdapter movieAdapter;
     private List<Movie> movieList = new ArrayList<>(); // Listeyi tutar
@@ -45,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         searchEditText = findViewById(R.id.searchEditText);
         searchButton = findViewById(R.id.searchButton);
         recyclerView = findViewById(R.id.recyclerView);
+        buttonFavorites = findViewById(R.id.buttonFavorites);
+
+        buttonFavorites.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, FavoritesActivity.class));
+        });
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

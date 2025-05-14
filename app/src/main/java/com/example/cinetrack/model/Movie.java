@@ -1,25 +1,64 @@
 package com.example.cinetrack.model;
 
 public class Movie {
-    private String Title;
-    private String Year;
-    private String imdbID;
-    private String Type;
-    private String Poster;
 
-    // Constructor (JSON'dan elle veri alırken kullanılıyor)
+    private String title;
+    private String year;
+    private String imdbID;
+    private String type;
+    private String poster;
+
+    // Boş constructor (Firebase ve JSON için gerekli)
+    public Movie() {}
+
+    // Parametreli constructor (API verisi için)
     public Movie(String title, String year, String imdbID, String type, String poster) {
-        this.Title = title;
-        this.Year = year;
+        this.title = title;
+        this.year = year;
         this.imdbID = imdbID;
-        this.Type = type;
-        this.Poster = poster;
+        this.type = type;
+        this.poster = poster;
     }
 
-    // Getter'lar (RecyclerView, Glide, TextView için)
-    public String getTitle() { return Title; }
-    public String getYear() { return Year; }
-    public String getImdbID() { return imdbID; }
-    public String getType() { return Type; }
-    public String getPoster() { return Poster; }
+    // Getter'lar
+    public String getTitle() {
+        return title;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public String getImdbID() {
+        return imdbID;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    // Setter'lar
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public void setImdbID(String imdbID) {
+        this.imdbID = imdbID;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
 }
