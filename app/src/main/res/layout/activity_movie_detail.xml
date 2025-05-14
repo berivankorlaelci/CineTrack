@@ -10,60 +10,83 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
 
+        <!-- Film Afişi -->
         <ImageView
             android:id="@+id/imageDetailPoster"
             android:layout_width="200dp"
             android:layout_height="300dp"
             android:layout_marginBottom="16dp"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop" />
 
+        <!-- Başlık -->
         <TextView
             android:id="@+id/textDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Film Başlığı"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:id="@+id/textDetailImdbID"
-            android:text="IMDb ID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"/>
-
+        <!-- Yıl -->
         <TextView
             android:id="@+id/textDetailYear"
-            android:text="Yıl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"/>
+            android:text="Yıl"
+            android:layout_marginBottom="4dp" />
 
+        <!-- Tür -->
         <TextView
             android:id="@+id/textDetailType"
-            android:text="Tür"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"/>
+            android:text="Tür"
+            android:layout_marginBottom="4dp" />
 
+        <!-- IMDb ID -->
+        <TextView
+            android:id="@+id/textDetailImdbID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMDb ID"
+            android:layout_marginBottom="4dp" />
+
+        <!-- IMDb Puanı -->
         <TextView
             android:id="@+id/textDetailRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="IMDb Puanı"
+            android:text="⭐ IMDb Puanı"
             android:textStyle="italic"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp" />
 
+        <!-- Açıklama -->
         <TextView
             android:id="@+id/textDetailPlot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Açıklama"
-            android:layout_marginTop="8dp"
+            android:text="📝 Film Açıklaması"
             android:textAlignment="center"
-            android:padding="8dp"/>
+            android:padding="8dp"
+            android:layout_marginBottom="12dp" />
 
+        <!-- Favorilere Ekle Butonu -->
+        <Button
+            android:id="@+id/buttonAddFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="💛 Favorilere Ekle"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
 
+        <!-- Geri Dön Butonu -->
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Geri Dön"
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>

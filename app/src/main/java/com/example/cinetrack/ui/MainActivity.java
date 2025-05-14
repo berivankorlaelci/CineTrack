@@ -18,6 +18,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.cinetrack.R;
 import com.example.cinetrack.adapter.MovieAdapter;
 import com.example.cinetrack.model.Movie;
+import com.google.firebase.FirebaseApp;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
